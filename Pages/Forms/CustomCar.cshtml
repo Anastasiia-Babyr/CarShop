@@ -1,0 +1,125 @@
+﻿@page
+@model CarShop.Pages.Forms.CustomCarModel
+@{
+      ViewData["Title"] = "Make ypor car";
+}
+
+<div class="text-center container">
+    <h1>Create your own car!</h1>
+
+    <form method="post" class="mx-auto mt-5 mb-5 px-5 pt-5 pb-5 rounded-5 bg-light col-4">
+        <input placeholder="Give your car a name..." asp-for="Car.CarName" type="text" />
+        <br />
+        <input type="checkbox" asp-for="Car.Spoiler" placeholder="Spoiler" />Spoiler
+        <br />
+        <input type="checkbox" asp-for="Car.FurSeats" placeholder="FurSeats" />FurSeats
+        <br />
+        <input type="checkbox" asp-for="Car.NeonHeadlights" placeholder="NeonHeadlights" />NeonHeadlights
+        <br />
+        <input type="checkbox" asp-for="Car.PinkSeatBelts" placeholder="PinkSeatBelts" />PinkSeatBelts
+        <br />
+        <input type="checkbox" asp-for="Car.MilkEngine" placeholder="MilkEngine" />MilkEngine
+        <br />
+        <input type="checkbox" asp-for="Car.LittleSunflower" placeholder="LittleSunflower" />LittleSunflower
+        <br />
+        <button class="btn btn-primary mt-1" type="submit">Get my car</button>
+    </form>
+    <h1>Information!</h1>
+
+    <div class="container">
+        <div class="makeYourOwnDiv">
+            <div class="row">
+                <div class="col-4">
+                    <img class="mainImage" src="~/images/spoiler.jpg" width="500" />
+                </div>
+                <div class="col-8">
+                    <div class="col-12 mb-5 mt-5" style="color:white;" >  
+                        <h3>Spoiler</h3>
+                        <p style="text-align:justify; margin-left:150px; margin-right: 40px;">If you choose to add a spoiler, we'll add it to the back of your car. It looks really cool.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="makeYourOwnDiv2">
+            <div class="row">
+                <div class="col-4">
+                    <img class="mainImage" src="~/images/furSeats.jpg" width="500" />
+                </div>
+                <div class="col-8 alig-items-center">
+                    <div class="col-12 mb-5 mt-5 align-middle makeYourOwnText">
+                        <h3>Fur Seats</h3>
+                        <p style="text-align:justify;margin-left:150px; margin-right: 40px;">Fur seats is a unique upgrade for your car.
+                        And also it provides warmth in winter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="makeYourOwnDiv">
+            <div class="row">
+                <div class="col-4">
+                    <img class="mainImage" src="~/images/neonHeadlights.jpg" width="500" />
+                </div>
+                <div class="col-8 alig-items-center">
+                    <div class="col-12 mb-5 mt-5 align-middle makeYourOwnText">
+                        <h3>Neon Headlights</h3>
+                        <p style="text-align:justify;margin-left:150px; margin-right: 40px;">Neon headlights definitely will attract attention to your car.
+                       It allows you to do a cosplay of one of your favourite car from "Cars"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="makeYourOwnDiv2">
+            <div class="row">
+                <div class="col-4">
+                    <img class="mainImage" src="~/images/pinkSeatBelts.jpg" width="500" />
+                </div>
+                <div class="col-8 alig-items-center">
+                    <div class="col-12 mb-5 mt-5 align-middle makeYourOwnText">
+                        <h3>Pink Seat Belts</h3>
+                        <p style="text-align:justify;margin-left:150px; margin-right: 40px;">Pink seat belts is a good choice for those, who have have a feeling for fashion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="makeYourOwnDiv">
+            <div class="row">
+                <div class="col-4">
+                    <img class="mainImage" src="~/images/milk.jpg" width="500" />
+                </div>
+                <div class="col-8 alig-items-center">
+                    <div class="col-12 mb-5 mt-5 align-middle makeYourOwnText">
+                        <h3>Milk Engine</h3>
+                        <p style="text-align:justify;margin-left:150px; margin-right: 40px;">Our new invention is ready to be installes in your car!
+                        It works on power of milk and allows you to save money on buying gasoline</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="makeYourOwnDiv2">
+            <div class="row">
+                <div class="col-4">
+                    <img class="mainImage" src="~/images/littleSunflower.jpg" width="500" />
+                </div>
+                <div class="col-8 alig-items-center">
+                    <div class="col-12 mb-5 mt-5 align-middle makeYourOwnText">
+                        <h3>Little Sunflower</h3>
+                        <p style="text-align:justify;margin-left:150px; margin-right: 40px;">Little sunflower is a cute acesory for your car.
+                        It will cheer you up whenever you'll get sad during driving</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div
+
+

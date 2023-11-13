@@ -1,0 +1,118 @@
+﻿@page
+@model CarShop.Pages.RaceModel
+@{
+    ViewData["Title"] = "Race";
+}
+
+<img class="mainImage w-100" src="~/images/race.gif" loop muted />
+
+<br />
+
+<button class="btn btn-primary m-1 position" onclick="toggleContent()">Finish the race!</button>
+
+<div id="additionalContent" style="display: none;">
+
+    <div class="text-center">
+        <div class="mx-auto mb-5">
+            <br />
+            <h1>Who won..?</h1>
+
+
+            @if (Model.carName == "Cool")
+            {
+                if (Model.CarPoints > 8)
+                {
+                    <h2>You're a winner! Congratulations!</h2>
+                }
+                else if (Model.CarPoints == 8)
+                {
+                    <h2>It's a tie!</h2>
+                }
+                else if (Model.CarPoints <= 8)
+                {
+                    <h2>You've lost 😭 We're so sorry, but our car is better 😎</h2>
+                }
+            }
+            else if (Model.carName == "Fancy")
+            {
+                if (Model.CarPoints > 10)
+                {
+                    <h2>You're a winner! Congratulations!</h2>
+                }
+                else if (Model.CarPoints == 10)
+                {
+                    <h2>It's a tie!</h2>
+                }
+                else if (Model.CarPoints <= 10)
+                {
+                    <h2>You've lost 😭 We're so sorry, but our car is better 😎</h2>
+                }
+            }
+            else if (Model.carName == "Nice Balance")
+            {
+                if (Model.CarPoints > 11)
+                {
+                    <h2>You're a winner! Congratulations!</h2>
+                }
+                else if (Model.CarPoints == 11)
+                {
+                    <h2>It's a tie!</h2>
+                }
+                else if (Model.CarPoints <= 11)
+                {
+                    <h2>You've lost 😭 We're so sorry, but our car is better 😎</h2>
+                }
+            }
+            else if (Model.carName == "Everything-in")
+            {
+                if (Model.CarPoints > 16)
+                {
+                    <h2>You're a winner! Congratulations!</h2>
+                }
+                else if (Model.CarPoints == 16)
+                {
+                    <h2>It's a tie!</h2>
+                }
+                else if (Model.CarPoints <= 16)
+                {
+                    <h2>You've lost 😭 We're so sorry, but our car is better 😎</h2>
+                }
+            }
+
+            <br/>
+            <h1>Your result:</h1>
+            <br />
+            <h2>Style:</h2>
+            @for (int i = 1; i <= Model.CarStyle; i++)
+            {
+                <span>⭐</span>
+            }
+            <h2>Speed:</h2>
+            @for (int i = 1; i <= Model.CarSpeed; i++)
+            {
+                <span>⭐</span>
+            }
+            <h2>Comfort:</h2>
+            @for (int i = 1; i <= Model.CarComfort; i++)
+            {
+                <span>⭐</span>
+            }
+            <h2>Total Points: @Model.CarPoints</h2>
+
+            <a class="btn btn-primary m-1 position" asp-area="" asp-page="/Index">Go back</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleContent() {
+        var content = document.getElementById("additionalContent");
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
+
+

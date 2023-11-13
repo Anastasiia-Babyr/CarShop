@@ -1,0 +1,44 @@
+﻿@page
+@model CarShop.Pages.CarModel
+@{
+    ViewData["Title"] = "Cars";
+}
+
+
+<div class="text-center">
+    <div class="mainText">
+        <h1 class="display-4 text-capitalize text-black">Our great selection of top cars!</h1>
+        <h4>Choose one or try our Car Builder! Then order and it's done!</h4>
+        <h4>No need to give us any detailы, btw</h4>
+        <h4>We already know everything 🤫 </h4>
+        <p class="smallText"><i>Only one car per order, tho</i></p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5 mt-5">
+                <div class="w-100 row makeYourOwnDiv">
+                    <div class="col-4">
+                        <img class="mainImage" src="~/images/createCar.jpeg" width="500" />
+                    </div>
+                    <div class="col-8 alig-items-center">
+                        <div class="align-middle makeYourOwnText">
+                            <h3 style="text-align:center;">Create your own car</h3>
+                            <p style="text-align:center;">Make your own car with our CarMaker!</p>
+                            <a class=" btn btn-primary" style="float:center" asp-area="" asp-page="Forms/CustomCar">Try now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @foreach (var car in Model.fakeCarDB)
+            {
+                var imagePath = "~/images/Cars/" + (car.ImageTitle + ".jpg");
+                <div class="col-4 mb-5 offset-1">
+                    <h4 style="font-size:2rem" class="offset-3">@car.CarName</h4>
+                    <a class="car-img" asp-area="" asp-page="Checkout/Checkout" asp-route-CarPoints="@car.Points" asp-route-CarStyle="@car.Style" asp-route-CarSpeed="@car.Speed" asp-route-CarComfort="@car.Comfort" asp-route-ImageTitle="@car.ImageTitle" asp-route-CarPrice="@car.FinalPrice" asp-route-CarName="@car.CarName"><img src="@imagePath" class="w-100 mainImage" asp-append-version="true" /></a>
+                    <br />
+
+                </div>
+            }
+        </div>
+    </div>
+</div>

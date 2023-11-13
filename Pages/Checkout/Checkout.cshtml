@@ -1,0 +1,20 @@
+﻿@page
+@model CarShop.Pages.Checkout.CheckoutModel
+@{
+    var imagePath = "~/images/Cars/" + (@Model.ImageTitle + ".jpg");
+    ViewData["Title"] = "Checkout";
+}
+
+<h1>Your order!</h1>
+<div class="align-content-center">   
+    <div class="mx-auto mb-5">
+        <img src=@imagePath class="finalImage mb-5 mt-5" style="width:50rem" asp-append-version="true" />
+        <p class="imageText">Your order for a @Model.CarName car is ready! 
+        <br/>
+        <br/>
+        Total price for your order is: @Model.CarPrice$</p>
+        <br />
+        <a class="btn btn-primary mt-1 mx-auto position-2" asp-area="" asp-route-CarComfort="@Model.CarComfort" asp-route-CarStyle="@Model.CarStyle" asp-route-CarSpeed="@Model.CarSpeed" asp-route-CarPoints="@Model.CarPoints" asp-page="FinalPage">Confirm Order</a>
+        
+    </div>
+</div>

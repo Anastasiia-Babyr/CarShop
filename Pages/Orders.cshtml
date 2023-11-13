@@ -1,0 +1,68 @@
+﻿@page
+@model CarShop.Pages.OrdersModel
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h3>Orders</h3>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Style
+            </th>
+            <th>
+                Comfort
+            </th>
+            <th>
+                Speed
+            </th>
+            <th>
+                Points
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var order in Model.CarOrders)
+        {
+             <tr>
+                 <td>
+                     @order.Id
+                 </td>
+                <td>
+                    @order.CarName
+                </td>
+                <td>
+                    @order.BasePrice
+                </td>
+                <td>
+                    @order.Style 
+                </td>
+                <td>
+                    @order.Comfort
+                </td>
+                <td>
+                    @order.Speed
+                </td>
+                <td>
+                    @order.Points
+                </td>
+            </tr>
+        }
+
+       
+    </tbody>
+</table>
